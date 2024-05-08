@@ -1,6 +1,6 @@
-class Data<DataItem> {
-  final String name;
-  final String gender;
+class Data{
+  String name;
+  String gender;
 
   Data ({
     required this.name,
