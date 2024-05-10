@@ -49,7 +49,15 @@ class _HomeState extends State<Home> {
                     // Display initial of first name as avatar
                     child: Text(user.firstName[0]),
                   ),
-                  title: Text('${user.title} ${user.firstName} ${user.lastName}'),
+                  // title: Text('${user.title} ${user.firstName} ${user.lastName}'),
+                  title: Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(text: '${user.title}'),
+                        TextSpan(text: '${user.firstName} ${user.lastName}')
+
+                      ])
+                  ),
                   subtitle: Text(user.city),
                   // You can display more user information here as needed
                 );
